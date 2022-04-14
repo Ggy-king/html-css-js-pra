@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>bom是指js与浏览器窗口交互的接口</p>
+    <p>一些浏览器改变尺寸，滚动条滚动等相关的特效都需要借助bom技术</p>
+    <p>window对象是当前js运行所处的窗口，而这个窗口中包含bom结构 window.document属性就是documnet对象</p>
+    <p>在有标签页的浏览器中，每个标签名页都有自己的window对象，即同一个标签页之间并不会共享同一个window对象</p>
+    <p>全局变量是window对象 即js文件之间在同一环境下是共享的</p>
+    <p>很多可以直接调用的函数都是window对象的方法</p>
+    <script>
+        var a = 1;
+        console.log(window.a);  //3
+        console.log(window.hasOwnProperty('a'))  //true
+        // hasOwnProperty为测试父元素是否有该属性方法
+    </script>
+
+</body>
+
+</html>

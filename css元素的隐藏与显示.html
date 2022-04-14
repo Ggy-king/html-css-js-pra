@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 元素的隐藏与显示有三种方法 */
+        .aa {
+            /* display none 会让出位置*/
+
+            /* display: none; 隐藏*/
+            /* visibility: hidden; */
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .bb {
+            /* visibility: inherit 继承父对象的可见性
+            visibility: visible 可见
+            visibility: hidden 隐藏
+            visibility: collapse 主要用于隐藏表格 
+            visibility 不会让出位置 */
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .cc {
+            /* overflow 意味溢出
+            overflow: visible; 默认溢出部分不隐藏
+            overflow: auto;  此为body与textarea的默认值，在需要时剪切内容并添加滚动条（需要时）
+            overflow: hidden; 溢出部分隐藏
+            overflow: scroll; 溢出部分显示滚动条 */
+            overflow: auto;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        /* 案例 */
+        .dd {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+        }
+
+        .dd img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ee {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            /* url() no-repeat center */
+
+        }
+
+        .dd:hover .ee {
+            display: block;
+        }
+
+        /* .dd:hover .ee 的意思是当鼠标经过dd的大盒子时，里面的ee的盒子做出反应 */
+    </style>
+</head>
+
+<body>
+    <div class="aa">1</div>
+    <div class="bb">2</div>
+    <div class="cc">123456789123456789123456789</div>
+    <div class="dd">
+        <div class="ee"></div>
+        <img src="图片储存/QQ图片20211112181754.jpg" alt="">
+    </div>
+
+</body>
+
+</html>

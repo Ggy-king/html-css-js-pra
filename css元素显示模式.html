@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a1 {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        h1 {
+            display: inline;
+            text-decoration: none;
+        }
+
+        span {
+            display: inline-block;
+            width: 120px;
+            height: 200px;
+        }
+
+        .dd {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            background: pink;
+            text-indent: 2em;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 块元素  -->
+    <!-- 独占一行  可以改变高宽边距 默认是容器 -->
+    <h1></h1>
+    <p></p>
+    <div></div>
+    <ul></ul>
+    <li></li>
+    <ol></ol>
+    <!-- 行内元素 -->
+    <!-- 相邻元素在一行  不可以改变高宽边距  默认是其内容的宽度 -->
+    <a href=""></a>
+    <b></b>
+    <i></i>
+    <em></em>
+    <span></span>
+    <i></i>
+    <s></s>
+    <!-- 行内块元素 -->
+    <!-- 每个元素之间有空白  同时具有块元素及行内元素的共同特点 -->
+    <img src="" alt="">
+    <input type="text">
+    <td></td>
+    <!-- 分割线 -->
+    <hr>
+    <a href="#" class="a1">我想把这个变成块元素</a>
+    <h1>我想把它变成行内元素</h1>
+    <h1>我想把它变成行内元素</h1>
+    <h1>我想把它变成行内元素</h1>
+    <span>我想把它变成行内块元素</span><span>我想把它变成行内块元素</span><span>我想把它变成行内块元素</span>
+    <!-- 单行文字垂直居中的方法 让文字的行高等于盒子的高度 -->
+    <div class="dd">我要让文字垂直居中</div>
+</body>
+
+</html>

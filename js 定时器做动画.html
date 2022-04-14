@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+
+            width: 200px;
+            height: 200px;
+            background-color: rgb(40, 113, 191);
+        }
+
+        #box {
+            position: absolute;
+            top: 100px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id='strat'>开始</button>
+    <div id="box" class="box"></div>
+
+    <script>
+        var ostrat = document.getElementById('strat');
+        var obox = document.getElementById('box');
+
+        var left = 50;
+        ostrat.onclick = function () {
+            var timer = setInterval(function () {
+                if (left >= 1000) {
+                    clearInterval(timer);
+
+                }
+                left += 2;
+                obox.style.left = left + 'px';
+            }, 2)
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

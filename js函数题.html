@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 喇叭花数 a! + b! + c! == abc
+        // 定义范围
+        // 阶乘函数
+        function fower(n) {
+            // 累乘器
+            var result = 1;
+            for (var i = 1; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        // 循化
+        for (var i = 100; i <= 999; i++) {
+            // 把数字i转换为字符串
+            var i_str = i.toString();
+            // 表示出三位
+            var a = Number(i_str[0]);
+            var b = Number(i_str[1]);
+            var c = Number(i_str[2]);
+            // 判断
+            if (fower(a) + fower(b) + fower(c) == i) {
+                console.log(i);
+            }
+        }
+
+        // 输出
+
+        // 排序
+        var aa = [11, 55, 33, 88, 44, 22];
+        aa.sort(function (a, b) {
+            if (a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+            // 上式要写 不写无法排序
+        })
+        console.log(aa);
+        // 简写
+        var bb = [22, 66, 99, 77, 55, 66, 33]
+        bb.sort(function (a, b) {
+            return a - b;
+            // 从大到下就b - a
+        })
+        console.log(bb)
+
+    </script>
+    <p>sort方法为排序 但条件是其参数为函数</p>
+
+</body>
+
+</html>

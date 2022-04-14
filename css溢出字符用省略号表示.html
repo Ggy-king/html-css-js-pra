@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aa {
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            /* 1.先强制一行内显示文本 */
+            white-space: nowrap;
+            /* 2.超出部分隐藏 */
+            overflow: hidden;
+            /* 3.文字用省略号代替超出部分 */
+            text-overflow: ellipsis;
+        }
+
+        .bb {
+            margin-top: 50px;
+            width: 150px;
+            height: 100px;
+            background-color: bisque;
+
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 弹性伸缩盒子模型显示 */
+            display: -webkit-box;
+            /* 限制在一个块元素内显示的文本行数 */
+            -webkit-line-clamp: 3;
+            /* 设置或检索伸缩盒子对象的子元素的排列方式 */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aa">
+        单行文本溢出做法
+    </div>
+    <div class="bb">
+        多行文本溢出做法但有较大的兼容性的问题 适合于webkit浏览器或移动端
+    </div>
+
+
+</body>
+
+</html>

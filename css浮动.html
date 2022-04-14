@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            /* float: left;right none 浮动，左右浮动 中间不会有缝隙*/
+            float: right;
+            font-weight: 700;
+
+        }
+
+        .nav1 {
+            background-color: pink;
+        }
+
+        .nav2 {
+            background-color: green;
+        }
+
+        .nav3 {
+            background-color: red;
+        }
+
+        .nav4 {
+            background-color: yellow;
+            float: left;
+        }
+
+        .p1 {
+            display: block;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>页面布局有三大流派 标准流（以前学的） 浮动（让盒子水平排列，对齐） 定位</p>
+    <div class="nav1">1 浮动后会让该盒子浮在其他盒子上方</div>
+    <div class="nav2">2 浮动元素在一行显示，且顶端对齐</div>
+    <div class="nav3">3 浮动元素具有行内块元素的性质</div>
+    <div class="nav4">块级元素未加宽度则与父级相同，添加浮动后宽度与其内容相同</div>
+    <p class="p1">构造页面时，一般先按标准流做排版大盒子，再用浮动做完整页面</p>
+    <p>浮动贴靠顺序 4贴3 3贴2 它只会一步一步向前一个盒子贴靠</p>
+
+</body>
+
+</html>

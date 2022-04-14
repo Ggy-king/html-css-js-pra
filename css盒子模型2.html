@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ss {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+            margin: 0 0 100px 0;
+
+        }
+
+        .dd {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin: 100px 0 100px 0;
+            /* 外边距垂直方向会合并，取大 */
+
+        }
+
+        .nav1 {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            margin-bottom: 100px;
+
+        }
+
+        .nav2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 下面这行代码毫无用处，两个嵌套元素间，父子同时都有外边距的同时，父元素塌陷较大的外边距，子元素失效 */
+            margin-top: 100px;
+        }
+
+
+        .nav3 {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            margin-bottom: 100px;
+            /* 解决办法为改变父元素 */
+            /* 1 可以为父元素添加边框 */
+            border: 1px black solid;
+            /* 2 可以为父元素增加内边距 */
+            /* 3 增加代码 overflow: hidden; */
+            overflow: hidden;
+
+        }
+
+
+        .nav4 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 100px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        span {
+            background-color: pink;
+            margin: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ss">大毛</div>
+    <div class="dd">二毛</div>
+    <div class="nav1">
+        <div class="nav2"></div>
+    </div>
+    <div class="nav3">
+        <div class="nav4"></div>
+    </div>
+    清除默认内外边距可以用通配符+padding:0;margin:0;
+    <ul>
+        <li>默认都有内外边距</li>
+    </ul>
+    <span>行内元素尽量值设计左右内外边距，上下内外边距不起作用</span>
+</body>
+
+</html>

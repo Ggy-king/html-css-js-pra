@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* 1 我们为什么要学习定位 */
+        /* （1）使某一元素可以在盒子内自由移动，并且压住其他盒子
+            （2）滚动窗口时，使某一盒子固定屏幕 */
+
+        /* 2 定位组成
+        （1) 定位 = 定位模式 + 边偏移
+          1定位模式 
+            static   静态定位
+            relative  相对定位
+            absolute  绝对定位
+            fixed 固定定位
+          2边偏移
+            top
+            bottom
+            left
+            right
+            如 top：80px 为顶端偏移量 定义元素相对其父元素上边线偏移80px的距离
+         */
+        /* 静态定位 为默认定位即无定位 语法 选择器{position:static；}
+         相对定位 元素在移动时，是相对于原来的位置来说的 语法 选择器{position: relative;}保留原来位置 */
+        /* 案例 a覆盖b */
+        .a {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .b {
+            width: 200px;
+            height: 120px;
+            background-color: blue;
+        }
+
+        /* 绝对定位 元素在移动时 是根据祖宗来说的 语法 {position: absolute;}
+           三大特点 1无父元素或父元素没有定位 以浏览器为准 右移靠右*/
+        /* 案例 */
+        .c {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        /* 2父级有定位，则子级一它为准
+            3绝对定位不在占有原先位置 下盒子会占有与相对定位相反 */
+        .d {
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .e {
+            position: absolute;
+            top: 40px;
+            left: 10px;
+
+        }
+
+        /* 固定定位 滚动时位置不变 语法 {position： fixed；} */
+        /* 案例 */
+        .guding {
+            position: fixed;
+            top: 200px;
+            right: 40px;
+            width: 100px;
+            height: 200px;
+
+        }
+
+        .guding img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 固定定位还可以以版心为准
+            走浏览器的一半
+            left:50%;
+            走版心的一半
+            margin-left:600px; */
+
+        .ss {
+            margin-top: 2000px;
+        }
+
+
+        /* 重要 粘性定位 先是相对定位后固定定位  sticky*/
+        /* 语法  选择器{position: sticky; top：10px} */
+        /* 1占有原先位置
+               2必须添加上下左右其中一个才有效
+               3以浏览器为准 */
+        /* 案例 */
+        .nian {
+            position: sticky;
+            top: 50px;
+            width: 200px;
+            height: 50px;
+            margin-top: 400px;
+            margin: auto;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+    <div class="d">
+        <img src="图片储存/图片储存/小米1.png" alt="">
+        <div class="e">
+            <img src="图片储存/图片储存/五彩导航22.png" alt="">
+        </div>
+    </div>
+    <div class="guding">
+        <img src="图片储存/u=613707095,3567870221&fm=193.jpg" alt="">
+
+    </div>
+    <div class="nian"></div>
+    定位的几点注意 
+    <p>定位类似于浮动 直接可以给盒子赋予display性质 具有长宽高</p>
+    <p>给定位居中需要用left 与 margin一起做</p>
+    <p>浮动具有环绕图片性质 并不会压住文字 但定位会  以上定位仅指固定定位与绝对定位</p>
+    <p>定位与浮动一样并不会脱标</p>
+
+    z-index属性用于定位 数值越大层级越高
+
+    <div class="ss">111</div>
+</body>
+
+</html>

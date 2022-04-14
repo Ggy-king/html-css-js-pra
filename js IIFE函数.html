@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>IIFE函数 即立即调用函数函数</p>
+    <p>构成 用圆括号将一匿名函数包裹变成表达式在接括号</p>
+    <p>在函数加其他符号也是可以的如 +-~</p>
+    <script>
+        (function () {
+            alert('IIFE函数')
+        })();
+
+
+        //IIFE 为变量赋值
+        var title = (function () {
+            return '你好';
+        })();
+        console.log(title);
+        // **********************************************************************************************************
+
+        var arr = [];
+        for (var i = 0; i < 5; i++) {
+            arr.push(function () {
+                alert(i);
+            })
+        }
+        arr[2]();   //弹出5 因为此时的i为全局变量 只有局部变量才有限时性（全局变量并不是值所有地方都能修改它）
+
+        // 解决办法
+        // IIFE 某些时候可以将全局变量变为局部变量
+        // 下面可以使用闭包加立即
+        var arr = [];
+        for (var i = 0; i < 5; i++) {
+            (function (i) {
+                arr.push(function () {
+                    alert(i);
+                });
+            })(i);
+
+        }
+        arr[2]()   //弹出2
+
+
+
+
+    </script>
+
+</body>
+
+</html>

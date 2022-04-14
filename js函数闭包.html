@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数闭包
+        // 闭包简单来说就是在一个函数内部调用其本身 则其内部所定义的变量可以表达出来 类似全局变量
+        function a() {
+            var js = '闭包现象';
+            function b() {
+                alert(js);
+            }
+            return b;
+        }
+        var c = a();
+        c();
+
+
+
+        var w = prompt('请输入您的小区编号')
+        var s = Number(prompt('请输入您的温度'));
+
+        var temp_A = creatCheckTemp(37.1);
+        var temp_B = creatCheckTemp(45);
+        var temp_C = creatCheckTemp(100);
+        if (w == 'A') {
+            temp_A(s);
+        } else if (w == 'B') {
+            temp_B(s);
+        } else {
+            temp_C(s);
+        }
+
+
+        function creatCheckTemp(standardTemp) {
+            function CheckTemp(n) {
+                if (n <= standardTemp) {
+                    alert('您的体温偏低')
+                } else {
+                    alert('您的体温偏高')
+                }
+            }
+            return CheckTemp;
+        }
+
+        // 闭包可以实现私有变量 即在其内定义一变量并闭包调用 该变量无法在外部进行改变
+        // 调用函数具有累加性
+
+    </script>
+
+</body>
+
+</html>

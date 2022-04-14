@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id='box'></div>
+
+    姓名：<input type="text" id='nameField'>
+
+    <form id="myform">
+        <p>
+            姓名：
+            <input type="text" name="nameField2">
+        </p>
+        <p>
+            年龄：
+            <input type="text" name="ageField">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+        <p>
+            <input type="reset">
+        </p>
+
+    </form>
+
+
+    <script>
+        // 第一步抓取盒子
+        var obox = document.getElementById('box');
+        // 第二步执行操作
+        obox.onclick = function () {
+            console.log('事件触发');
+        }
+
+        obox.ondblclick = function () {
+            console.log('事件触发');
+        } //当鼠标双击对象时
+
+        obox.onmousedown = function () {
+            console.log('事件触发');
+        } //鼠标在对象上被按下
+
+        obox.onmouseup = function () {
+            console.log('事件触发');
+        }//鼠标在对象上按下被松开
+
+        obox.onmousemove = function () {
+            console.log('事件触发');
+        } //鼠标在对象上按下被移动
+
+        obox.onmouseenter = function () {
+            console.log('事件触发');
+        } //鼠标进入对象 （类似onmouseover）
+
+        obox.onmouseleave = function () {
+            console.log('事件触发');
+        } //鼠标离开对象  （类似onmouseout）
+
+        // ************************************************************************
+        var nameField = document.getElementById('nameField');
+        nameField.onkeypress = function () {
+            console.log('系统按键不会被识别');
+        }
+        nameField.onkeydown = function () {
+            console.log('按键都会识别 且优先级高于press');
+        }
+        nameField.onkeyup = function () {
+            console.log('按键抬起触发事件');
+        }
+        // *******************************************************************
+        var myform = document.getElementById('myform');
+        var nameField2 = myform.nameField2;
+        var ageField = myform.ageField;
+        // 表单操作
+        nameField2.oninput = function () {
+            console.log('你正在修改姓名');
+        }
+        nameField2.onchange = function () {
+            console.log('你已修改姓名');
+        }
+        nameField2.onfocus = function () {
+            console.log('姓名框已经得到了焦点');
+        }
+        nameField2.onblur = function () {
+            console.log('姓名框失去了焦点');
+        }
+        myform.onsubmit = function () {
+            alert('你正在提交表单');
+        }
+        myform.onreset = function () {
+            alert('表单被重置');
+        }
+        // ***********************************************************************************
+        // onload   //当页面或图像被加载完后事件
+        // onunload  //当用户退出页面时事件 
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

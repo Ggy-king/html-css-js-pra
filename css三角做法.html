@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三角做法</title>
+    <style>
+        .box1 {
+            width: 0;
+            height: 0;
+            /* border: 100px solid pink; */
+            /* 无宽高的盒子命名边框 都为三角形 */
+            border-top: 100px solid pink;
+            border-left: 100px solid red;
+            border-right: 100px solid blue;
+            border-bottom: 100px solid black;
+        }
+
+        .box2 {
+            margin-top: 10px;
+            width: 0;
+            height: 0;
+            border: 100px solid transparent;
+            border-top-color: blue;
+        }
+
+        /* .div {
+            width: 0;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            border: 10px solid transparent;
+            border-left-color: tomato;
+        } */
+        .jd {
+            position: relative;
+            width: 120px;
+            height: 240px;
+            background-color: pink;
+        }
+
+        .jd span {
+            right: 15px;
+            /* 之所以是10px 是因为小三角形实际是正方形 向上则考虑上半部分三角形 */
+            top: -10px;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            border: 5px solid transparent;
+            border-bottom-color: pink;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="jd">
+        <span></span>
+    </div>
+
+</body>
+
+</html>

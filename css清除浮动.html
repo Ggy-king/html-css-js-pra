@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 当子盒子浮动时需要清除浮动 */
+        /* 影响下面布局时，需要清除浮动 */
+        .nav {
+            width: 400px;
+            /* height: 100px;   当父级没有高度时需要清除浮动 */
+            margin: 0 auto;
+            background-color: pink;
+            /* 方法一，在父级盒子中写入 overflow:hidden/auto/scroll  缺点是无法显示溢出内容 */
+            overflow: hidden;
+        }
+
+        .nav1 {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            float: left;
+
+        }
+
+        .nav2 {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            float: left;
+
+
+        }
+
+        .footer {
+            background-color: black;
+            height: 200px;
+        }
+
+        .aa {
+            /* 方法二 额外标签法 clear: left right both; 要额外创造一个盒子里写 */
+            clear: both;
+        }
+
+        /* 方法三 :after伪类元素法 为后闭合 直接写就行 空格加class名 写在父元素上*/
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix:after {
+            *zoom: 1;
+            /* 为了兼容IE6,7 */
+        }
+
+
+        /* 方法4 双伪类元素清除浮动 前后都闭合 */
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav clearfix">
+        <div class="nav1">1</div>
+        <div class="nav2">2</div>
+        <div class="aa"></div>
+    </div>
+    <div class="footer">3</div>
+
+</body>
+
+</html>

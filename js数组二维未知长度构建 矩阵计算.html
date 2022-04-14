@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var tArray = new Array();  //先声明一维
+        for (var k = 0; k < i; k++) {    //一维长度为i,i为变量，可以根据实际情况改变
+
+            tArray[k] = new Array();  //声明二维，每一个一维数组里面的一个元素都是一个数组；
+
+            for (var j = 0; j < p; j++) {   //一维数组里面每个元素数组可以包含的数量p，p也是一个变量；
+
+                tArray[k][j] = "";    //这里将变量初始化，我这边统一初始化为空，后面在用所需的值覆盖里面的值
+            }
+        }
+
+
+        function matri(q, p) {
+            var m = new Array(q.length);
+            for (var i = 0; i < q.length; i++) {
+                m[i] = new Array(p[0].length);
+                for (var j = 0; j < p[0].length; j++) {
+                    m[i][j] = 0;
+                    for (var k = 0; k < p.length; k++) {
+                        m[i][j] += q[i][k] * p[k][j];
+                    }
+                }
+            }
+            return m;
+        }
+    </script>
+</body>
+
+</html>

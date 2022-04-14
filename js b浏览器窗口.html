@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 5000px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>innerHeight浏览器窗口的内容高度区域 包含水平滚动条</p>
+    <p>innerWidth浏览器窗口的内容宽度区域 包含垂直滚动条</p>
+    <p>outerHeight浏览器外部高度</p>
+    <p>outerWidth浏览器外部宽度</p>
+    <p>document.documentElement.clientWidth 获得不包含滚动条的窗口</p>
+    <p>改变尺寸可被监听 即window.onresize</p>
+    <p>window.scrollY||document.documentElement.scrollTop 两者都表示浏览器滚动条已卷高度 这样写兼容性更好 其中前者是只读的后者可以改变</p>
+    <p>document.documentElement.offsetTop 可以直接改变滚动数值</p>
+    <p>改变滚动可被监听 即window.onscroll或window.addEventListener('scroll')</p>
+
+    <script>
+        console.log('窗口内宽度有滚', window.innerWidth);
+        console.log('窗口外宽度', window.outerWidth);
+        console.log('窗口内宽度无滚', document.documentElement.clientWidth);
+
+        window.onresize = function () {
+            var root = document.documentElement;
+            console.log('窗口大小改变了', root.clientHeight, root.clientWidth);
+        }
+        console.log(window.scrollY);
+        console.log(document.documentElement.scrollTop);
+
+        window.onscroll = function () {
+            console.log('窗口卷动了', window.scrollY);
+        }
+    </script>
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            margin-top: 200px;
+            background-color: #ccc;
+        }
+
+        #xy {
+            font-size: 30px;
+            margin-top: 30px;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 200px;
+            left: 400px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <p>offsetX 鼠标指针相对于事件源元素的水平坐标</p>
+    <p>offsetY 鼠标指针相对于事件源元素的垂直坐标</p>
+    <p>pageX 鼠标指针相对于整张网页的水平坐标</p>
+    <p>pageX 鼠标指针相对于整张网页的垂直坐标</p>
+    <p>clientX 鼠标指针相对于浏览器的水平坐标</p>
+    <p>clientX 鼠标指针相对于浏览器的垂直坐标</p>
+    <div id="box"></div>
+    <div id="xy"></div>
+    <script>
+        var oBox = document.getElementById('box');
+        var oXy = document.getElementById('xy');
+
+        oBox.onmousemove = function (e) {
+            oXy.innerText = 'offsetX/Y的数值是:' + e.offsetX + ',' + e.offsetY
+                + '   pageX/Y的数值是:' + e.pageX + ',' + e.pageY
+                + '   clientX/Y的数值是:' + e.clientX + ',' + e.clientY;
+
+        }
+
+
+    </script>
+    <p>
+        charCode码 0~9 48~57码 大写A~Z 65~90码 小写a~z 97~122码
+        keyCode码 0~9 48~57码 a~Z不大小写 65~90码 回车13 空格32 方向左上右下37 38 39 40
+    </p>
+    <div id="box1"></div>
+    <script>
+        var oBox1 = document.getElementById('box1');
+
+        var t = 200;
+        var l = 400;
+
+        // 设置事件监听
+        document.onkeydown = function (e) {
+            switch (e.keyCode) {
+                case 37:
+                    l -= 3;
+                    break;
+                case 38:
+                    t -= 3;
+                    break;
+                case 39:
+                    l += 3;
+                    break;
+                case 40:
+                    t += 3;
+                    break;
+            }
+            oBox1.style.left = l + 'px';
+            oBox1.style.top = t + 'px';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 看表单第二行的名字代码，其中label标签为扩大选择范围标签，主要是为了增强用户体验，内涵for,所对应input中含id标签 -->
+    <form action="dome" method="post" name="第一次制作">
+        <!-- input中text可以实现单行输入字段的效果 -->
+        <!-- input中name为必须属性是必须要加的一种属性，才能给后台传递数据 -->
+        <!-- input中value为必须属性，也是给后台传递数据的，与name类似 -->
+
+
+        <label for="名字"><strong>名字：</strong></label><input type="text" name="名字" value="请输入你的名字" id="名字"> <br>
+        <!-- input中radio可以实现单选的效果 小圆圈的形式 -->
+        <!-- radio中需要贾name属性其赋值必须一样才能实现多选选一的效果 -->
+
+
+        <strong>性别：</strong>
+        <label for="男性">男</label><input type="radio" name="最好是女孩子" value="男" id="男性">
+        <label for="女性">女</label><input type="radio" name="最好是女孩子" value="女" id="女性"> <br>
+        <!-- input中checkbox定义为多选的意思 是正方形的样子 -->
+        <!-- input中checked为属性，可在多选单选设为默认值，即第一次进页面已被勾选 -->
+
+
+        <p>前者为html4 现在5可以直接用lable标签包裹两项即可 不要有for</p>
+        <label>
+            <input type="radio">男
+        </label>
+        <strong>爱好：</strong>
+        <em>打篮球</em> <input type="checkbox" name="爱好" value="打篮球" checked="checked">
+        <em>吃饭</em><input type="checkbox" name="爱好" value="吃饭">
+        <em>睡觉</em><input type="checkbox" name="爱好" value="睡觉"> <br>
+        <!-- input中password为隐藏字符 一般设为密码时用 -->
+        <!-- input中maxlength为属性，定义该段字符串最大长度是多少 -->
+
+
+        <strong>密码：</strong><input type="password" name="密码" maxlength="8"> <br>
+        <!-- input中submit为提交按钮,reset为重置按钮，其中value可以改变其上面的文字 -->
+
+
+        <input type="submit" value="免费注册"><br>
+        <input type="reset" value="重新设置">
+        <!-- input中button是一个普通按钮，后期结合js搭配使用 -->
+
+
+
+        <input type="button" value="获取免费验证码"><br>
+        <!-- input中file是上传文件的一种按钮 -->
+
+
+        <strong>上传头像</strong><input type="file"><br>
+
+        <p>
+            留言：<textarea name="" id="" cols="30" rows="10">多行文本框</textarea>
+        </p>
+
+
+        disabled 表示锁死表单不允许修改
+    </form>
+</body>
+
+</html>

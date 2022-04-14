@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮廓图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            position: relative;
+            box-sizing: border-box;
+            width: 650px;
+            height: 360px;
+            border: 1px solid #ccc;
+            margin: 50px auto 0;
+            overflow: hidden;
+
+        }
+
+        .box ul {
+            width: 60000px;
+            position: absolute;
+            left: 0;
+            transition: left .5s ease 0s;
+        }
+
+        .box ul li {
+            float: left;
+            list-style: none;
+
+        }
+
+        .box .leftbtn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-20px);
+            left: 5px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: pink;
+        }
+
+        .box .rightbtn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-20px);
+            right: 5px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+        <ul class="list" id="list">
+            <li><img src="../图片储存/0.jpg" alt=""></li>
+            <li><img src="../图片储存/111.jpg" alt=""></li>
+            <li><img src="../图片储存/2.jpg" alt=""></li>
+            <li><img src="../图片储存/3.jpg" alt=""></li>
+            <li><img src="../图片储存/4.jpg" alt=""></li>
+        </ul>
+        <button class="leftbtn" id="leftbtn"></button>
+        <button class="rightbtn" id="rightbtn"></button>
+
+    </div>
+
+    <script>
+        var oBox = document.getElementById('box');
+        var oList = document.getElementById('list');
+        var oLeftbtn = document.getElementById('leftbtn');
+        var oRightbtn = document.getElementById('rightbtn');
+
+        var i = 0;
+        var lock = true;
+
+        var cio = oList.firstElementChild.cloneNode(true);
+        oList.appendChild(cio);
+
+        //    右按钮监听
+        oRightbtn.onclick = function () {
+            if (!lock) return;
+            lock = false;
+            oList.style.transition = 'left .5s ease 0s';
+            i++;
+            oList.style.left = i * -650 + 'px';
+            if (i == 6) {
+                setTimeout(function () {
+                    oList.style.transition = 'none';
+                    oList.style.left = 0;
+                    i = 0;
+                }, 0);
+                i++;
+            }
+            oList.style.left = i * -650 + 'px';
+            // 函数节流
+            setTimeout(function () {
+                lock = true;
+            }, 500);
+        }
+        // 左按钮监听
+        oLeftbtn.onclick = function () {
+            if (!lock) return;
+
+            lock = false;
+
+            // 判断是不是第0张，如果是，就要瞬间用假的替换真的
+            if (i == 0) {
+                // 取消掉过渡，因为要的是瞬间移动，不是“咕噜”过去
+                oList.style.transition = 'none';
+                // 直接瞬间移动到最后的假图片上
+                oList.style.left = -5 * 650 + 'px';
+                // 设置一个延时器，这个延时器的延时时间可以是0毫秒，虽然是0毫秒，但是可以让我们过渡先是瞬间取消，然后再加上
+                setTimeout(function () {
+                    // 加过渡
+                    oList.style.transition = 'left .5s ease 0s';
+                    // idx改为真正的最后一张
+                    i = 4;
+                    oList.style.left = -i * 650 + 'px';
+                }, 0);
+            } else {
+                i--;
+                oList.style.left = -i * 650 + 'px';
+            }
+
+            // 函数节流
+            setTimeout(function () {
+                lock = true;
+            }, 500);
+        }
+    </script>
+
+
+</body>
+
+</html>

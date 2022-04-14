@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 0;
+            height: 0;
+            /* border-top: 50px solid transparent;
+            border-right: 50px solid blue;
+            border-bottom: 50px solid blue;
+            border-left: 50px solid transparent; */
+
+
+            /* border-top: 100px solid transparent;
+            border-right: 50px solid blue;
+            border-bottom: 0px solid skyblue;
+            border-left: 0px solid red; */
+
+            border-color: transparent red transparent transparent;
+            border-style: solid;
+            border-width: 100px 50px 0 0;
+        }
+
+        .price {
+            width: 160px;
+            height: 24px;
+            line-height: 24px;
+            border: 1px solid red;
+            margin: 0 auto;
+        }
+
+        .gg {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            text-align: center;
+            background-color: red;
+            color: #fff;
+            font-weight: 700;
+
+        }
+
+        .gg i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-color: transparent white transparent transparent;
+            border-style: solid;
+            border-width: 24px 10px 0 0;
+        }
+
+        .ggg {
+            padding: 6  px;
+            font-size: 12px;
+            color: gray;
+            text-decoration: line-through;
+            /* 删除线 */
+        }
+    </style>
+</head>
+
+<body>
+    <p>倒三角做法</p>
+    <p>梯形做法需要两个盒子 一个长方形与一个直角三角形 重合后变颜色</p>
+    <div class="box1">
+        <!-- 直角三角形 -->
+    </div>
+    <div class="price">
+        <span class="gg">
+            ￥1650
+            <i></i>
+        </span>
+        <span class="ggg">￥5665</span>
+    </div>
+
+</body>
+
+</html>

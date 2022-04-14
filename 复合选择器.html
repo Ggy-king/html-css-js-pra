@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 如果多个父亲标签包含相同的子代标签，想对某一个子代标签进行修饰需要用到后代选择器 */
+        /* 后代选择器  除对应子代标签改变其余子代标签不改变 */
+        ol li {
+            color: blue;
+
+        }
+
+        ol li a {
+            color: darkslateblue;
+            text-decoration: none;
+        }
+
+        .nav li a {
+            color: darkturquoise;
+        }
+
+        /* 父代中包含儿子孙子是一样的，可以用子选择器选择最近一级进行修改 */
+        /* 子选择器  元素1>元素2 {} */
+        div>a {
+            color: fuchsia;
+        }
+
+        /* 任何一级想要拥有相同属性可以用并集选择器实现 */
+        /* 并集选择器可以包含其他任何选择器 */
+        /* 并集选择器 元素1，元素2，元素3 {} */
+        span,
+        h4,
+        dl>dd {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我不会改变</a></li>
+    </ul>
+    <ul class="nav">
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我会改变</a></li>
+    </ul>
+    <ol>
+        我这一行就不改变
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ol>
+
+</body>
+
+<body>
+    <div>
+        <a href="#">我是儿子，最近一级</a>
+        <p>
+            <a href="#">我是孙子，远一级</a>
+        </p>
+    </div>
+    <span>并集1</span>
+    <h4>并集2</h4>
+    <dl>
+        <dd>并集3变</dd>
+        <dd>并集4变</dd>
+        <dd>并集5变</dd>
+    </dl>
+    <p>交集选择器 li.soax 中间没有空格 即又是li中又有soax</p>
+
+</body>
+
+</html>

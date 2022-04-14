@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 如果你想命名多种属性还嫌麻烦，就可以用到符合属性 */
+        /* div {font: font-style font-weight fonr-size/line-height font-family;} */
+        div {font: normal 700 20px '黑体'}
+        /* 文字有颜色、对齐方式、各种线、缩进、行间距 */
+
+        /* 颜色有三种表示方式 引号加英文颜色 十六进制表示 rgb色域表示 */
+        .aa {color: burlywood;}
+        .ab {color: #00ffd5;}
+        .ac {color: rgb(200, 0,0);}
+
+        /* 文字对齐方式有三种center left right 是用text-align进行操作 */
+        .ba {text-align: center;}
+        .bb {text-align: left;}
+        .bc {text-align: right;}
+
+        /* 文字各种线包括 普通none 下滑线underline 上划线overline 删除线line-through */
+        .ca {text-decoration: none;}
+        .cb {text-decoration: underline;}
+        .cc {text-decoration: overline;}
+        .cd {text-decoration: line-through;}
+
+        /* 每一段开头都要空两格，这就用到text-indent缩进语法 单位可以用px像素 em为当前一个单位 */
+        .da {text-indent: 16px;}
+        .db {text-indent: 4em;}
+
+        /* 行间距是文字间距加上上下之间缝隙间距 用line-height表示 像素 */
+        .ea {line-height: 26px;}
+
+  
+    </style>
+</head>
+<body>
+    <div>复合写必须按一定顺序，前两个属性可以省略但后两个不行</div>
+    <div class="aa">英文字母表示</div>
+    <div class="ab">十六进制表示,有#字符号</div>
+    <div class="ac">rgb表示</div>
+    <div class="ba">text-align</div>
+    <div class="bb">text-align</div> 
+    <div class="bc">text-align</div>
+    <a href="#" target="blank" class="ca">none可以消除下划线</a>
+    <div class="cb">下划线</div>
+    <div class="cc">上划线</div>
+    <div class="cd">删除线</div>
+    <div class="da">缩进像素</div>
+    <div class="db">缩进单位</div>
+    <div class="ea">行间距<br>
+                    行间距<br>
+                    行间距<br>
+
+    </div>
+</body>
+</html>

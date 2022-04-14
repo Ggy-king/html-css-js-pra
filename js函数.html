@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ass() {
+            console.log('123');
+
+        }
+        var add = function () {
+
+        }
+        ass();
+        ass();
+        ass();
+
+        fun();  //B
+        var fun = function () {
+            console.log('A');
+        }
+        function fun() {
+            console.log('B')
+        }
+
+        fun();  //A
+
+
+        function kll(a, b, c) {
+            var sum = a + b - c;
+            console.log(parseInt(sum));
+        }
+        kll(3, 5, 9);
+        function h() {
+            console.log(arguments);
+            console.log(arguments[0]);
+            console.log(arguments[2]);
+        }
+        h(44, 55, 66, 77, 88, 99);
+        // 不管用户输入多少个参数都能计算
+        function sumss() {
+            var summ = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                summ += arguments[i];
+            }
+            console.log('所有数字的和是' + summ);
+        }
+        sumss(4, 5, 6, 8, 9, 5, 3);
+
+    </script>
+    <p>用function定义函数</p>
+    <P>函数名后加圆括号即为调用函数</P>
+    <p>函数的声明也可以提升 注意用函数表达式写法是不能提升的</p>
+    <p>函数会优先提升 函数提升等级大于变量</p>
+    <p>若两种写法定义同一函数名 则函数调用的为函数表达式写法 即定义了变量</p>
+
+
+    <p>函数的参数 用逗号隔开 赋值个数大于定义参数无影响 赋值个数小于定义参数则多余参数值为undefined</p>
+    <p>arguments 为对象赋予类数组对象形式</p>
+
+    <p>return 函数返回值 它可以代替一些操作 但最后要表达时需要定义变量 它更能体现函数的意义</p>
+    <p>一个有返回值的函数可以当做普通值来看</p>
+    <p>遇见return程序即退出函数 在if中可代替else 甚至大括号都不用写</p>
+
+    <p>全局变量与局部变量 局部变量如函数内定义的其不具有效应 具有暂时性且在外部无法调用</p>
+    <p>遮蔽效应 全局与局部如用通用变量名 则局部为局部全局为全局不发生改变</p>
+    <p>function ab(n)  其中n为形参 形参也是局部变量</p>
+    <p>不用var 定义则是全局变量 无论其位置在哪</p>
+
+    <p>函数的嵌套 内部函数应在在内部先调用</p>
+
+
+</body>
+
+</html>
