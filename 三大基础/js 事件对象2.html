@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 100px;
+            margin: 200px auto 0;
+            background-color: #ccc;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        e.preventDefault()方法用来阻止某事件的发生（其默认事件）
+    </p>
+    <p>
+        onmousewheel 为鼠标滚轮事件 他的事件对象e提供deltaY属性表示滚轮的方向 向下滚动返回正值 向上滚动返回负值
+    </p>
+    <!-- 做一个用户只能输入数字和小写字母的文本框 -->
+    <input type="text" id="field">
+    <script>
+        var oField = document.getElementById('field');
+        oField.onkeypress = function (e) {
+            if (!(e.charCode >= 48 && e.charCode <= 57 || e.charCode >= 97 && e.charCode <= 122)) {
+                e.preventDefault();
+            }
+        };
+
+    </script>
+
+    <p>e.stopPropagation()方法是用来阻止事件传播</p>
+    <button id="btn">点我弹出弹出层</button>
+    <div id="box">
+
+    </div>
+    <script>
+        var oBox = document.getElementById('box');
+        var oBtn = document.getElementById('btn');  
+
+        oBtn.onclick = function (e) {
+            e.stopPropagation()
+            oBox.style.display = 'block'
+        }
+        document.onclick = function () {
+            oBox.style.display = 'none'
+        }
+        oBox.onclick = function (e) {
+            e.stopPropagation()
+            oBox.style.display = 'block'
+        }
+    </script>
+
+</body>
+
+</html>

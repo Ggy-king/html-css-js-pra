@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 定义两个变量
+        var weight = Number(prompt('请输入你的体重，以千克为单位'));
+        var height = Number(prompt('请输入你的身高，以米为单位'));
+        // 计算
+        var bmi = weight / Math.pow(height, 2);
+        // 输出
+        alert('您的BMI指数为' + bmi);
+        if (bmi >= 24) {
+            alert('超胖')
+        } else if (bmi >= 20) {
+            alert('胖')
+        } else if (bmi >= 18) {
+            alert('正常')
+        } else {
+            alert('瘦')
+        }
+    </script>
+
+</body>
+
+</html>

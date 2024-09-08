@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>事件委托就是解决耗费内存大 运算繁琐的问题</p>
+    <p>利用冒泡机制，将后代元素事件委托给祖先元素</p>
+    <p>不能委托不冒泡的事件给祖先元素</p>
+    <p>最内层元素不能在额外有更内层元素</p>
+    <p>e.target 触发此事件的最早元素，即事件的原元素</p>
+    <p>e.currentTarget 事件处理程序附加到的元素</p>
+    <button id="btn">点我生成</button>
+    <ul id="list">
+        <li>我是老的</li>
+        <li>我是老的</li>
+        <li>我是老的</li>
+    </ul>
+    <script>
+        var oBtn = document.getElementById('btn');
+        var oList = document.getElementById('list');
+
+        oList.onclick = function (e) {
+            // e.target为用户真正点击的那个元素 但其实该元素是委托在父元素上
+            e.target.style.color = 'red'
+        }
+        oBtn.onclick = function () {
+            var Lis = document.createElement('li');
+            Lis.innerText = '我是新的';
+            oList.appendChild(Lis); 
+        }
+
+
+        // onmouseenter 这个属性天生就是不冒泡的 相当于你事件处理函数附加给了那个DOM节点就是那个DOM节点自己触发的事件 没有冒泡过程
+        // onmouseover 这个属性天生就是冒泡的 即它是从底部开始逐渐执行
+    </script>
+
+</body>
+
+</html>

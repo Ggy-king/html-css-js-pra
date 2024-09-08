@@ -1,0 +1,86 @@
+/* 通篇符号 */
+
+.w {
+    width: 1360px;
+    margin: auto;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/* 头部导航栏制作 */
+
+/* 头部导航栏制作 */
+.head {
+    background: rgb(36, 41, 51);
+    height: 40px;
+}
+.headl li {
+    float: left;
+}
+.headr li {
+    float: right;
+}
+.headl li a{
+    
+    font-size: 12px;
+    color: #8a8f99;
+    font-weight: 400;
+    line-height: 40px;
+    margin-left: 40px;
+}
+.headr li a {
+    
+    font-size: 12px;
+    color: #8a8f99;
+    font-weight: 400;
+    line-height: 40px;
+    margin-right: 40px;
+}
+.headl li a:hover,.headr li a:hover {
+    color: #f5f5f5;
+    font-weight: 500;
+    border-bottom: 2px solid #f5f5f5;
+}
+.toutell {
+    margin-left: 40px;
+}
+.toutelr {
+    margin-right: 40px;
+}
+/* 头部固定栏制作 */
+
+/* 头部固定栏制作 */
+.header {
+    height: 84px;
+    background-color: #f7f9fb;
+}
+.header .one strong {
+    float: left;
+    margin-left: 75px;
+    line-height: 84px;
+   
+}
+.header .one strong a {
+    font-size: 36px;
+    color: #242933;
+}
+.header .two li {
+    float: left;
+    font-size: 14px;
+    line-height: 84px;
+    margin-right: 40px;
+    font-weight: 600;
+
+}
+.header .two li a {
+    color: #242933;
+}
+.header .two1 {
+    margin-left: 248px;
+}
+.header li a:hover,.header strong a:hover {
+    color: #415fff;
+}

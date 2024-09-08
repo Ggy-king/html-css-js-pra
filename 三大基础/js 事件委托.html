@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 给批量元素添加监听 -->
+    <!-- 批量监听内存会消耗很大 -->
+    <ul id="list">
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+        <li>点击变色</li>
+    </ul>
+    <button id="btn">请点我</button>
+    <ul id="as"></ul>
+    <script>
+        var oList = document.getElementById('list');
+        var oLi = document.getElementsByTagName('li');
+
+        for (var i = 0; i < oLi.length; i++) {
+
+            oLi[i].onclick = function () {
+                this.style.color = 'red';
+            }
+        }
+        // 动态元素绑定
+        var oBtn = document.getElementById('btn');
+        var oAs = document.getElementById('as');
+
+        oBtn.onclick = function () {
+            var lis = document.createElement('li');
+            lis.innerText = '我是新列表项';
+            oAs.appendChild(lis);
+            lis.onclick = function () {
+                this.style.color = 'red'
+                alert('点我干几把');
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

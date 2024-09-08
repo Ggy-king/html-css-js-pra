@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>使用new Date()即可得到当前时间日期对象，他是object类型值</p>
+    <p>使用new Date(2020,11,1)即可得到指定日期对象 注意第二个表示月份从开始计算 11 == 12</p>
+    <p>也可以用new Date('2020-12-1')写法</p>
+
+    <script>
+        var s = new Date();
+        var a = new Date(2020, 5, 1);   //不算时区
+        var b = new Date('2020-6-1');   //算时区
+
+        console.log(s);
+        console.log(a);
+        console.log(b);
+
+        console.log('日期' + s.getDate());
+        console.log('星期' + s.getDay());
+        console.log('月份' + s.getMonth());
+        console.log('年份' + s.getFullYear());
+        console.log('小时' + s.getHours());
+        console.log('分钟' + s.getMinutes());
+        console.log('秒数' + s.getSeconds());
+
+        // 时间戳 两种方法 时间戳表示1970年1月1日距离此时的毫秒数
+        var timestamp1 = s.getTime();   //精确到毫秒
+        var timestamp2 = Date.parse(s);  //精确到秒，但也是毫秒数，只不过最后三位是000
+
+        var ss = new Date(1650944244932);
+        console.log(ss);
+        console.log(timestamp1);
+        console.log(timestamp2);
+
+
+    </script>
+
+</body>
+
+</html>

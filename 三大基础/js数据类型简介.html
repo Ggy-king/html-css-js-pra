@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // typeof运算符 可以检测各种数据类型 它不是函数不需要括号 它为操作符
+        var a = typeof 5;
+        console.log(a);
+        console.log(typeof '5');
+        var b = 'asc', address;
+        console.log(typeof address)
+        // address未赋值 打印结果为undefined
+    </script>
+    <ul>数据类型基本
+        <li>number 数字类型</li>
+        <li>string 字符串类型</li>
+        <li>boolean 布尔类型</li>
+        <li>undefined undefined类型</li>
+        <li>object null类型</li>
+    </ul>
+    <P>数字类型</P>
+    <p>1 0.5可以写成.5</p>
+    <p>2 科学计数法 3e8 = 3*10的八次方 4e-8 = 4*10的负四次方</p>
+    <p>3 二进制以0b开头 八进制以0开头 十六进制以0x开头</p>
+    <p>4 NaN是一个数字类型的值 但却不是一个数 0/0是NaN 无法得到数的都是NaN NaN不自等</p>
+    <p>5 Infinity 是表示正无穷大的数值。
+        -Infinity 是表示负无穷大的数值。
+        当数超过浮点数的上限时，即 1.797693134862315E+308,显示 Infinity。
+        当数超过浮点数的下限时，即 -1.797693134862316E+308,显示 -Infinity。</p>
+    <p>字符串类型 表示文本</p>
+    <p>'imo' + 'll' 表达 'imoll' 字符串拼接 还可以加变量（斩断连接）等多操作</p>
+    <script>
+        var oo = 10;
+        var str = '我买了' + oo + '个苹果';
+        alert(str);
+    </script>
+    <p>var s = '' 为空字符串</p>
+    <p>属性是通过打点来访问的 如length 'gaoguangyuan'.length 长度不管什么符号</p>
+    <p>charAt()方法 可以得到指定位置的字符 str.charAt(0)</p>
+    <p>substring(a,b)方法 可以的得到从a位置到b位置(不包括b位置)的子串 若只有a则一直选取到最后 若b与a反了则等价与a与b</p>
+    <p>substr(a,b)方法 表示从a开始截取长度为b的子串 省略b则到结尾 a可以为复数从-1开始(注意都是正序 与其他编程语言不同)</p>
+    <p>slice(a,b)方法 几乎与substring()方法一致 但其可以从负数开始且a必须小于b</p>
+    <p>toUpperCase()和toLowerCase()方法 可以把字符串全变成大写或小写</p>
+    <p>indexOf()方法 返回某个字符串值在字符串中首次出现的位置 若检索的字符串值没有出现，则返回-1</p>
+
+
+    <p>布尔类型 boolean</p>
+    <p>只有true和false</p>
+
+    <p>undefined类型</p>
+    <p>undefined既是一种值有是一种类型 这种类型只有它一个值</p>
+
+
+    <p>null类型</p>
+    <p>null既是空,它是空对象</p>
+    <p>当我们需要将对象销毁,数组销毁或删除事件监听时,通常将他们设置为null.</p>
+    <p>typeof null = object object为对象 数组检查结果也是object </p>
+    <!-- 如 box.onclick = null; 将盒子点击事件取消掉 -->
+
+
+
+    <p>复杂数据类型</p>
+    [1,2,3]数组
+    {a:1,b:2}对象
+    function(){}函数
+
+
+
+</body>
+
+</html>

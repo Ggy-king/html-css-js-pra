@@ -1,0 +1,5 @@
+/* 不需要写标签，直接写css就行 */
+p {
+    font:normal 200 24px/66px '宋体';
+    color: blue;
+}

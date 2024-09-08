@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>数组头尾操作</p>
+    <p>push()在尾部插入新项 不需要等号赋值</p>
+    <p>pop()在尾部删除最后一项 他可以返回被删除的项</p>
+    <p>unshift()在头部插入新项</p>
+    <p>shift()在头部删除</p>
+    <p>splice() 替换（数字，数字，替换内容）第一个数字为要替换的下标，第二个为连续几项</p>
+    <p>slice(a,b) 类似字符串用法</p>
+    <script>
+        arr1 = [1, 2, 3, 5, 6];
+        arr1.push(7);
+        console.log(arr1);
+
+
+        arr2 = [1, 2, 3, 5, 6];
+        var item = arr2.pop();
+        console.log(arr2);
+        console.log(item);
+
+
+        arr3 = [1, 2, 3, 5, 6];
+        arr3.unshift(7, 5);
+        console.log(arr3);
+
+        arr4 = [1, 2, 3, 5, 6];
+        var items = arr4.shift();
+        console.log(arr4);
+        console.log(items);
+
+        arr5 = [1, 2, 3, 5, 6];
+        arr5.splice(2, 2, 5665, 6565, 6565)
+        console.log(arr5);
+
+
+        arr6 = [1, 2, 3, 4, 5, 6];
+        var it = arr6.splice(1, 0, 1238737);
+        console.log(arr5);
+        // 还可以删除 替换 添加
+        console.log(it);
+        // splice属性会以数组的形式返回值
+
+
+        var arr7 = [1, 2, 3, 4, 5, 6, 7];
+        var i = arr7.slice(2, -1);
+        var c = arr7.slice(2);
+        console.log(i);
+        console.log(c);
+    </script>
+
+</body>
+
+</html>

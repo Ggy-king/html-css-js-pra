@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>原理</p>
+    <p>1 使用prompt()函数弹出输入框，让用户输入两个数字</p>
+    <p>2 对用户输入的数字进行加法运算 由于其输入的字符串 需要转化为数字类型 才能做加法运算</p>
+    <p>3 最后用alert()显示结果</p>
+
+    <script>
+        // 用户输入两个数字
+        // 嵌套函数先执行内部函数
+        var a = prompt('请输入第一个数字');
+        var b = prompt('请输入第二个数字');
+        // 改变类型并相加数字
+        var sum = Number(a) + Number(b);
+        // 打印结果
+        alert('数字' + a + '加上数字' + b + '的结果是' + sum);
+    </script>
+
+</body>
+
+
+</html>

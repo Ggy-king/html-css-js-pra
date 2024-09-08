@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 让用户输入星期几
+        var a = Number(prompt('请输入今天是星期几'));
+        // 进行判断
+        // var a_str = a.toString();
+        if (a >= 1 && a <= 7) {
+            if (a >= 1 && a <= 5) {
+                var b = Number(prompt('请输入您的年龄'));
+                if (b >= 1 && b <= 150) {
+                    if (b >= 10) {
+                        alert('您的票钱为300元');
+                    } else {
+                        alert('您的票钱为140元');
+                    }
+
+                } else {
+                    alert('您输入的年龄或格式可能不正确');
+                }
+            } else {
+                var b = Number(prompt('请输入您的年龄'));   
+                if (b >= 1 && b <= 150) {
+                    if (b >= 10) {
+                        alert('您的票钱为500元');
+                    } else {
+                        alert('您的票钱为210元');
+                    }
+
+                } else {
+                    alert('您输入的年龄或格式可能不正确');
+                }
+
+            }
+
+        } else {
+            alert('您输入的格式有误')
+        }
+
+
+        // 让用户输入年龄
+        // 进行判断
+        // 输入票钱
+    </script>
+
+</body>
+
+</html>

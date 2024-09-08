@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>运算顺序： 非运算-数学运算-关系运算-逻辑运算</p>
+    <script>
+        // 闰年运算
+        var a = Number(prompt('请输入一个数字年份'));
+        alert((a % 4 == 0 && a % 100 != 0) || (a % 100 == 0 && a % 400 != 0));
+
+    </script>
+
+</body>
+
+</html>

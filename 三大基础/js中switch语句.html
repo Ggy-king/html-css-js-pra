@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>当某一个变量被多次分类讨论时，可以使用switch语句化简</p>
+    <script>
+        // 输入变量
+        var month = Number(prompt("请输入一个月份"))
+        // switch判断
+        switch (month) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                alert(month + '月份有31天')
+                break
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+                alert(month + '月份有30天')
+                break
+            case 10:
+            case 11:
+            case 12:
+                alert(month + '月份有29天')
+                break
+            default:
+                alert('您输入的月份有误')
+        }
+    </script>
+    1 括号中为要讨论的变量
+    2 case代替变量与后面数字做比对，冒号后为执行语句，break 为终止语句 js与其他编程不同 无终止则会按上面执行结果继续
+    3 default 为否则的意思
+
+</body>
+
+</html>

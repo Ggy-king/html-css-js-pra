@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>简单来说 就是函数在其内部调用自己 自己调用自己即为递归</p>
+    <p>边界条件 递归何时终止 即递归出口</p>
+    <script>
+        // 计算n的阶乘
+        function add(n) {
+            // 递归出口 不能让它永远算下去
+            if (n == 1) return 1;
+            // 递归表达
+            return n * add(n - 1);
+
+        }
+        // add(4);
+        // var a = add(4);
+        console.log(add(4));
+        // alert(a);
+
+
+        // 斐波那契递归写法
+        // 本质后后一项为前两项的和
+        function fib(n) {
+            if (n == 0 || n == 1) return 1;
+            return fib(n - 1) + fib(n - 2);
+        }
+        // 计算前十五项
+        for (var i = 0; i < 15; i++) {
+            console.log(fib(i))
+        }
+
+
+
+        // 递归实现深克隆 防止藕断丝连 浅克隆智能克隆一层数组
+        arr1 = [11, 22, 33, 44, [55, 66, 77, [88, 99]], 00]
+
+        function arr(n) {
+            var result = [];
+            // 遍历数组的每一项
+            for (var i = 0; i < n.length; i++) {
+                // 判断
+                // 若是数组 则递归需要在次循环
+                if (Array.isArray(n[i])) {
+                    result.push(arr(n[i]));
+                } else {
+                    // 若不是 则直接推入
+                    result.push(n[i]);
+                }
+            }
+            // 返回result值 防止一直都是空盒子计算
+            return result;
+        }
+        var arr2 = arr(arr1);
+        console.log(arr2);
+        console.log(arr1);
+        console.log(arr1[4] == arr2[4]);   
+    </script>
+
+</body>
+
+</html>

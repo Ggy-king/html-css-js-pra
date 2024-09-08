@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 其他值转化为数字类型 用Number()函数 首字母大写
+        Number('123');
+        // 123
+        Number('123年');
+        // NAN 特殊数字类型值
+        Number("2e3");
+        // 2000
+        Number('1+1');
+        // NaN 
+        Number('');
+        // 0
+        Number(true);
+        // 1
+        Number(false);
+        // 0
+        Number(undefined);
+        // NaN
+        Number(null);
+        // 0
+
+        // 将字符串转化为整数 用parseInt()函数pares转化 lnt整数
+        parseInt('3.14');
+        // 3  不具有四舍五入的功能 
+        console.log(~~14.95);   //14 向下取整  ~~吊
+        parseInt(21);
+        // 21 
+        parseInt('3.14是圆周率');
+        // 3 自动截掉第一个数字之后的非数字 净化功能
+        parseInt('圆周率是3.14');
+        // NaN 必须第一个是数字
+
+
+        // 将字符串转化为浮点数 parseFloat()
+        parseFloat('3.14');
+        // 3.14
+        parseFloat('03.14是圆周率');
+        // 3.14 自动截掉第一个非数字后所有 净化功能 自动省去0
+        parseFloat('圆周率是3.14');
+        // NaN 必须第一个是数字
+
+        // 将其他值转化为字符串
+        String(123);
+        // '123'
+        String(undefined);
+        // 'undefined'
+        String(null);
+        // 'null'
+        String(0xf);
+        // '15'
+        String(true);
+        // 'true'
+        String(Infinity);
+        // 'Infinity'
+
+        // 几乎所有值都有toString方法
+        // 数字要是想单独使用方法需要加上括号 成为对象
+        (6).toString()
+        // '6'
+
+
+        // 其他值转化为布尔值 用Boolean()函数
+        Boolean(132); ture
+        Boolean(0); false
+        Boolean(NaN); false
+        Boolean(-Infinity); ture
+        // 数字类型除了0和NaN为假其余为真
+        Boolean(''); false
+        Boolean('hsuhxu'); ture
+        // 只有空字符串为假其余为真
+        Boolean(undefined); false
+        Boolean(null); false
+
+    </script>
+
+</body>
+
+</html>

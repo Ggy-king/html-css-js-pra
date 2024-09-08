@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>事件执行的顺序分为两个阶段 一是捕获 二是冒泡</p>
+    <p>捕获顺序从外到内，冒泡顺序从内到外</p>
+    <p>dom0级事件监听 只能监听冒泡阶段
+        oBox.onclick = function(){
+
+        }
+    </p>
+    <p>dom2级事件监听 
+        oBox.addEventListener('click',function(){
+            注意不写on
+            true监听捕获
+            flase监听冒泡
+
+        },true)
+    </p>
+    <p>同一盒子 捕获冒泡click顺序 最内部元素不在区分捕获冒泡 按书写顺序执行</p>
+    
+</body>
+</html>

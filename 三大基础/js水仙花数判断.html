@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水仙花数</title>
+</head>
+
+<body>
+    <script>
+        // 用户输入三位数
+        var a = Number(prompt('请输入一个三位数字'));
+        // 判断是否符合输入规则 嵌套判断
+        if (!isNaN(a) && a >= 100 && a <= 999) {
+            // 取出各位置的数字
+            // 数学方法
+            var b = Math.floor(a / 100);
+            var c = Math.floor(a / 10) % 10;
+            var d = a % 10;
+            // 判断
+            console.log(b);
+            console.log(c);
+            console.log(d);
+            if (Math.pow(b, 3) + Math.pow(c, 3) + Math.pow(d, 3) == a) {
+                alert(a + '是水仙花数');
+            } else {
+                alert(a + '不是水仙花数');
+            }
+        } else {
+            alert('您的输入不符合规则');
+        }
+
+        // 用户输入三位数
+        var n = Number(prompt('请输入一个三位数字'));
+        // 判断是否符合输入规则 嵌套判断
+        if (!isNaN(n) && n >= 100 && n <= 999) {
+            // 字符串方法
+            // 先将数字转化成字符串
+            var n_str = n.toString();
+            // 取出各位置的数字
+
+            var q = Number(n_str.charAt(0));
+            var w = Number(n_str.charAt(1));
+            var e = Number(n_str.charAt(2));
+            // 判断
+            console.log(q);
+            console.log(w);
+            console.log(e);
+            if (Math.pow(q, 3) + Math.pow(w, 3) + Math.pow(e, 3) == n) {
+                alert(n + '是水仙花数');
+            } else {
+                alert(n + '不是水仙花数');
+            }
+        } else {
+            alert('您的输入不符合规则');
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

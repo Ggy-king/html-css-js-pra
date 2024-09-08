@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>.join()与.split()方法</p>
+    <p>join是将数组转化为字符串 split是将字符串转化为数组</p>
+    <p>concat()可以连接多个数组</p>
+    <p>reverse()可以反转这个数组，注意他是直接改变原数组 其他类型需要转换</p>
+    <p>indexOf()返回下标 没有的话返回-1</p>
+    <p>includes()判断括号内数值是否在内ture flase</p>
+    <p>字符串也可以用数组方法调出下标</p>
+    <script>
+        var a = [1, 2, 3, 4, 5, 6];
+        var b = a.join('.');
+        // var b = [1, 2, 3, 4, 5, 6].jion(',')
+        console.log(b);
+        var d = 'snausicniu'
+        var e = d.split('');
+        console.log(e);
+
+
+        var aa = [1, 2];
+        var bb = [3, 4];
+        var cc = [4, 5];
+        var qq = aa.concat(bb, cc);
+        console.log(qq)
+
+        var dd = [1, 2, 3, 4, 5, 6];
+        dd.reverse();
+        console.log(dd);
+        var uu = 'abcdefg'.split('').reverse().join('');
+        console.log(uu);
+
+        // 二维数组
+        var matrix = [[1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+        [11, 22, 33]]
+
+        matrix.length   //4
+
+        for (var i = 0; i < 4; i++) {
+            for (var j = 0; j < 3; j++) {
+                console.log(matrix[i][j])
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 最大值最小值
+        var arr = [5, 6, 88, 99, 6, 3, 45];
+        var max = arr[0];
+        var min = arr[0];
+        for (var i = 1; i <= arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            } else if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        console.log(max, min);
+
+        // 数组去重
+        var p = [6, 1, 1, 5, 2, 2, 3, 1, 1, 3, 5];
+        var o = [];
+        for (var i = 0; i < p.length; i++) {
+            if (!o.includes(p[i])) {
+                o.push(p[i]);
+            }
+        }
+        console.log(o);
+
+
+
+
+        // 选取随机数3项
+        // 给数组
+        var qq = [12, 23, 56, 54, 89, 77, 2];
+        // 定义空变量
+        var kk = [];
+        // 选三次for循环
+        for (var i = 0; i < 3; i++) {
+            // 定义选下标范围
+            var n = parseInt(Math.random() * qq.length);
+            // 推入该项
+            kk.push(qq[n]);
+            // 删除该项防止重复
+            qq.slice(n, 1);
+        }
+        console.log(kk);
+
+    </script>
+
+</body>
+
+</html>

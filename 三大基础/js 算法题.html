@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for循环用户输入n求出（3/2 + 4/3 +...+ n+1/n）
+        var n = Number(prompt('请输入一个数字'));
+        var sum = 0;
+        for (var i = 2; i <= n; i++) {
+            sum += (i + 1) / i
+        }
+        alert(sum.toFixed(2));
+
+
+        // 求n的阶乘
+        var result = 1;
+        for (var i = n; i >= 1; i--) {
+            result *= i
+        }
+        alert(result)
+
+        // 莱布尼茨公式估算
+        // 算法 观察这一项与上一项之间的关系 才是重点
+        var s = 0;
+        var item = 1;
+        for (var i = 1; i <= n; i++) {
+            item *= i / (2 * i + 1);
+            s += item;
+        }
+        alert((s + 1) * 2)
+
+        // 寻找一个数的约数
+        var a = Number(prompt('请输入一个数字'))
+        for (var i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                console.log(i)
+            }
+        }
+    </script>
+</body>
+
+</html>

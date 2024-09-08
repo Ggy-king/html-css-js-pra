@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <span class="erweima"></span>
+    </div>
+    <p>父节点 parentNode 得到最近的父节点</p>
+    <p>子节点 childNodes 得到所有的子节点 包括文本节点元素节点</p>
+    <p>只返回元素节点的子节点 children 非标准</p>
+
+
+    <p>fristChild 第一个子节点但是包括所有节点 fristElementChild 第一个子元素节点有兼容</p>
+    <p>lastChild 最后一个子节点但是包括所有节点 lastElementChild 最后一个子元素节点有兼容</p>
+
+    <p>实际开发的写法 children[0] children[parentNode.children.lenth - 1]</p>
+    <script>
+        let er = document.querySelector('.erweima');
+        let a = er.parentNode;
+        console.log(a)
+
+
+        // 如果只想得到元素节点 需要用节点数值判断
+        for (let i = 0; i < ul.length; i++) {
+            if (ul.childNode[i].nodeType == 1) {
+                console.log(ul.childNode[i]);
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

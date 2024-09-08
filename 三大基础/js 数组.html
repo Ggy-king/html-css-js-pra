@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    1 数组 当一组数据中出现多个数据时需要用数组
+    2 下标从0开始 称为下标为第几的项
+    3 可以用方括号的形式访问数组的项
+    4 下标越界 即访问数组中不存在的下标不报错 会给出undefined
+    Array 数组
+    <script>
+        // 方法一
+        var arr1 = [33, 54, 69, 78];
+        // 方法二
+        var arr2 = new Array(11, 44, 55, 99);
+        // 方法三
+        var arr3 = new Array(4);
+        // 这表示该数组长度为4 值为undefined
+        console.log(arr1);
+        console.log(arr2);
+        console.log(arr3);
+        console.log(arr1[0]);
+        console.log(arr2[10000]);
+        console.log(arr2.length);
+        // 数组长度 
+        console.log(arr1[arr1.length - 1]);
+
+
+        // 改变数值
+        arr1[1] = 0;
+        console.log(arr1);
+        // 如果超过 则会创造
+
+        // 数组的遍历
+        for (var i = 0; i < arr1.length; i++) {
+            // 上面是小于号 因为少一个
+            console.log(arr1[i]);
+        }
+
+    </script>
+    <p>检测数组     Array.isArray()用来检测是不是数组</p>
+
+</body>
+
+</html>

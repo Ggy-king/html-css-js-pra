@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求100以内的质数
+        // 若给某个循环加上lable 则可以用continue lable 写法终止某个程序
+        outer: for (var i = 2; i <= 100; i++) {
+            for (var j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    continue outer;
+                }
+            }
+            console.log(i)
+            // 能过遇到这句话的数字一定是质数 不是质数的都过去了
+        }
+
+        // 鸡兔同笼
+        for (var i = 0; i <= 35; i++) {
+            for (var j = 0; j <= 35; j++) {
+                if (i + j == 35 && 2 * i + 4 * j == 94) {
+                    console.log(i, j)
+                }
+            }
+        }
+        // 一层循环
+        for (var a = 0; a <= 35; a++) {
+            var b = 35 - a;
+            if (2 * a + 4 * b == 94) {
+                console.log(a, b)
+            }
+        }
+    </script>
+
+</body>
+
+</html>
