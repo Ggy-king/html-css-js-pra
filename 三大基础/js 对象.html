@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>k:v对 对象是键值对组成 属性和值的映射</p>
+    <p>当键名不符合js命名规范时，必须要用引号包裹</p>
+    <p>访问时需要用点语法</p>
+    <script>
+
+        var xiaoming = {
+            name: '小明',
+            age: 12,
+            sex: '男',
+            hobbies: ['足球', '篮球'],
+            'f-book': '激流',
+            sayhello: function () {
+                console.log('hello');     //如果某个属性值也为函数，则它也被称为对象的方法
+                                        //方法也是函数，只不过方法是函数的对象属性，它需要用对象打点调用
+            }
+        };
+        xiaoming.name;
+        xiaoming.age;
+        xiaoming['f-book'];    //访问不符合语法规范的键名需要加方括号且用单引号     
+
+        var obj = {
+            a: 1,
+            b: 2,
+            c: 3
+        };
+        var key = 'b';
+        console.log(obj.key);   //undefined
+        console.log(obj[key]);    //2     赋予变量后也需要用方括号访问
+
+        obj.a = 6;  //赋值就可以修改
+        obj.d = 5;  //添加也没有特殊语法直接添加就可以
+        delete obj.c;  //删除某个键值对
+        console.log(obj);
+    </script>
+
+</body>
+
+</html>

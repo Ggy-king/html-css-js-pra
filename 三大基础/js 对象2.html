@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>对象的遍历 for in </p>
+
+    <script>
+        var obj1 = {
+            a: 1,
+            b: 2,
+            c: 3
+        }
+        var obj2 = {};
+        // 遍历之后实现对象的浅克隆 注意对象为引用类型值
+        for (var k in obj1) {
+            console.log("属性" + k + '的值是' + obj1[k]); 
+            obj2[k] = obj1[k];
+        }
+
+        obj1.d = 5;
+        console.log(obj1);
+        console.log(obj2);
+        // 深克隆讲的实际是 你克隆的是引用类型且该类型中又有引用类型 故需要深克隆
+        // 如对象中又有数组或又有其他引用类型
+
+    </script>
+    <script>
+        // 深克隆
+        var c = {
+            a: 11,
+            b: 22,
+            d: [33.44, 55, {
+                f: 66,
+                g: 77,
+                h: [88, 99]
+            }]
+            // 在数组内部定义对象 直接尖括号就可以了
+        }
+
+
+        function deepClone(o) {
+            // 判断o是数组还是对象 注意判断是数组在前 因为typeof属性判断数组时的结果也为对象
+            if (Array.isArray(o)) {
+                // 是数组
+                // 遍历加递归
+                var ruselt = [];
+                for (var i = 0; i < o.length; i++) {
+                    result.push(deepClone(o[i]));
+                }
+            } else if (typeof o == 'object') {
+                // 是对象
+                // 遍历加递归
+                var ruselt = {};
+                for (var k in o) {
+                    result[k] = deepClone(o[k]);
+                }
+            } else {
+                // 是基本属性值
+                // 直接推入赋值
+                var result = o;
+            }
+            return result;
+        }
+    </script>
+
+</body>
+
+</html>

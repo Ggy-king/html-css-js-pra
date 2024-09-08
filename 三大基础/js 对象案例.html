@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box img {
+        width: 80px;
+
+    }
+</style>
+
+
+<body>
+    <div id="box"></div>
+    <!-- js对象很吊 对象可以设置几乎任何键值对 又可以设置方法等一系列事件 -->
+    <script>
+        // 第一步定义类
+        function TrafficLight() {
+            this.color = 1;
+            this.init();
+            // 绑定事件监听
+            this.bindEvent();
+        }
+        // 开始绑定
+        // 第二步初始化
+        TrafficLight.prototype.init = function () {
+            this.dom = document.createElement('img');
+            this.dom.src = '../image/' + this.color + '.jpg';
+            box.appendChild(this.dom);
+
+
+        }
+        // 事件监听
+        TrafficLight.prototype.bindEvent = function () {
+            // 备份上下文
+            var self = this;
+            this.dom.onclick = function () {
+                self.changeColor();
+            };
+        }
+
+        // 改变颜色
+        TrafficLight.prototype.changeColor = function () {
+            this.color++;
+            if (this.color == 4) {
+                this.color = 1;
+            };
+            this.dom.src = '../image/' + this.color + '.jpg';
+        };
+
+        // 得到盒子
+        var box = document.getElementById('box');
+        // 实例化
+        var count = 100;
+
+        while (count--) {
+            new TrafficLight();
+        }
+
+
+    </script>
+</body>
+
+</html>

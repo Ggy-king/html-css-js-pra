@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom2页面</title>
+</head>
+
+<body>
+    <p>navigator对象</p>
+    <p>windows.navigator 属性可以检索navigator对象 它内部含有用户此次活动的浏览器的相关属性和标识</p>
+    <p>appName 浏览器官方名称</p>
+    <p>appVersion 浏览器版本</p>
+    <p>userAgent 浏览器的用户代理（含有内核信息和封装壳信息） 重要</p>
+    <p>platform 用户操作系统</p>
+
+    <script>
+        console.log('浏览器的品牌', navigator.appName);
+        console.log('浏览器的版本', navigator.appVersion);
+        console.log('用户代理', navigator.userAgent);
+        console.log('操作系统', navigator.platform);
+    </script>
+
+    <p>history对象 提供了操作浏览器会话历史的接口</p>
+    <p>其常规操作就是模拟浏览器的回退按钮
+        history.back(); 等同于浏览器的回退按钮
+        history.go(-1); 等同于history.back()
+    </p>
+    <p>更简单的方法 直接在a标签中加入javascript语句</p>
+    <button id="btn">回退</button>
+    <a href="javascript:history.back()">回退</a>
+    <script>
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = function () {
+            // history.back();
+            history.go(-1);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url();
+        /* 此为导入式 一般不使用此方法 该方法会立即渲染html不会先渲染css */
+
+
+
+        /* 这个是内部样式引入 */
+        div {font-weight: 700;}
+        /* 外部引入.css文件 代码为<link rel="stylelessheet" href=".css文件路径" */
+    </style>
+    <link rel="stylesheet" href="第一次css文件格式.css">
+</head>
+<body>
+    <div>内部样式</div>
+    <!-- <h3 style="color: #f55;">行内样式</h3>这个是行内引入 直接就是style=""就行 --> 
+    <h3 style="color:red;">行内样式</h3>
+    <p>外部样式</p>
+    
+</body>
+</html>

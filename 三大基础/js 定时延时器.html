@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>定时器
+        setInterval(function(a,b){
+        执行语句
+        },2000,22,55)
+        2000是以毫秒为单位 22 55 分别对应a b
+    </p>
+    <p>
+        延时器制作
+        setTimeout(function(){
+        这个延时器只会执行一次 下面为延迟多少毫秒 清除 clearTimeout
+        },2000)
+    </p>
+    <p>
+        异步语句 setInterval setTimeout 其中的函数为回调函数
+        注意 异步语句并不会阻塞其他程序的正常运行
+    </p>
+
+    <h1 id="iofo">0</h1>
+    <button id="strat">开始</button>
+    <button id="end">结束</button>
+    <script>
+        var a = 0;
+        setInterval(function () {
+            console.log(++a);
+        }, 1000);
+        // 第二种写法
+        function fun() {
+            console.log(++a);
+        }
+        setInterval(fun, 1000);
+        // 注意fun后无括号 因为我们要的是函数而不是值
+
+
+        // *****************************************************
+        // 定时器制作
+        var oinfo = document.getElementById('iofo');
+        var ostrat = document.getElementById('strat');
+        var oend = document.getElementById('end');
+
+        var a = 0;
+        var timer;
+
+        ostrat.onclick = function () {
+            // 为了防止定时器叠加先清除定时器
+            clearInterval(timer);
+            // 开始输出定时内容
+            timer = setInterval(function () {
+                oinfo.innerText = ++a;
+            }, 1000);
+
+        }
+        oend.onclick = function () {
+            clearInterval(timer);
+        }
+
+        // ***********************************************************************
+        // 延时器制作
+        setTimeout(function () {
+            alert('您好');
+        }, 2000)
+
+
+    </script>
+
+</body>
+
+</html>

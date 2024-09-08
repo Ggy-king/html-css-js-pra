@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            outline: none;
+        }
+
+        .q img {
+            display: inline-block;
+            /* 对齐属性需要是行内块或行内元素 */
+            vertical-align: middle;
+            /* middle 居中对齐
+            top 行中最高元素顶端对齐
+            bottom 行中最低元素顶端对齐
+            baseline 父元素的基线上 */
+        }
+
+        .aa img {
+            height: 100px;
+            /* 一种解决办法 vertical-align: 元素 */
+            vertical-align: bottom;
+            /* 第二章解决办法 display: block; */
+            /* display: block; */
+        }
+
+        .aa {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="cursor: default;">鼠标经过样式为小白（默认） cursor:default</p>
+    <p style="cursor: pointer;">鼠标经过样式为小手 cursor:pointer</p>
+    <p style="cursor: move;">鼠标经过为移动 cursor:move </p>
+    <p style="cursor: text;">鼠标经过为文本 cursor:text </p>
+    <p style="cursor: not-allowed;">鼠标经过为禁止 cursor:not-allowed </p>
+    <p>表单取消轮廓线(通用) input{outline:none}</p>
+    <input type="text">
+    <p>文本域防止拖拽（通用） textarea {resize:none}</p>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <div class="q">
+        <img src="图片储存/五彩导航2.png" alt="">vertical-align实现元素对齐
+    </div>
+    <div class="aa">
+        <img src="图片储存/小米1.png" alt="">bug 图片底部会有一个空白缝隙 原因是图片默认与基线对齐
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var op = document.getElementById('op'); //id调用
+            alert(op.nodeType);
+            alert(typeof op);
+
+            var ps = document.getElementsByTagName('p');
+            console.log(ps);
+
+            var ps1 = op.getElementsByTagName('p');
+            console.log(ps1);
+
+            var clas = document.getElementsByClassName('box1');
+            console.log(clas);
+
+            var a = document.querySelector('#box2 .spec');
+            var b = document.querySelectorAll('ul li');
+
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div class="box" id="op">
+        <p>dom是js对html操作的方法</p>
+        <p>nodeType方法可以判断节点数</p>
+        <p>ducoment为网页的根 节点数为9</p>
+        <p>记document.getid 相同的Id名只能得到第一个</p>
+    </div>
+    <div class="box1" id="pp">
+        <p>记document.getTagname 标签名注意它得到的一定是数组</p>
+        <p>记document.getClassname 为类名选择</p>
+        <p>记document.querySelector() id名加类名中间有空格 只能选一个</p>
+        <p>记document.querySelectorAll() id名加类名中间有空格 选的是元素数组 都能选</p>
+        <p>延迟运行 window.onload = function(){} 给窗口添加事件监听使其运行完html后执行js</p>
+        <p>事件监听简而言之就是用户与主机交互后主机执行代码</p>
+        <p>两种事件监听 1 .onxxxx 如oBox.onclick = function(){}</p>
+    </div>
+
+</body>
+
+</html

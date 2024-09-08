@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .tb-promo {
+            position: relative;
+            margin: 100px auto;
+            width: 520px;
+            height: 280px;
+            background-color: PINK;
+
+        }
+
+        .tb-promo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .prev {
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            left: 0px;
+            width: 26px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            border-radius: 0px 20px 20px 0px;
+        }
+
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            right: 0px;
+            width: 26px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            border-radius: 20px 0px 0px 20px;
+        }
+
+        .promo-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -45px;
+            width: 90px;
+            height: 18px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 9px;
+        }
+
+        .promo-nav li {
+            float: left;
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border-radius: 50px;
+            margin: 3px;
+        }
+
+        .promo-nav .selected {
+            background-color: rgb(255, 80, 0);
+        }
+    </style>
+</head>
+<div class="tb-promo">
+    <img src="图片储存/定位1.jpg" alt="">
+    <!-- 左侧按钮 -->
+    <a href="#" class="prev">&lt;</a>
+    <!-- 右侧按钮 -->
+    <a href="#" class="next">&gt;</a>
+    <ul class="promo-nav">
+        <li class="selected"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<p> 一 可以使用并集选择器 把相同的地方提取出来</p>
+<p> 二 若一个盒子中既有left又有right属性 则先左后右 同理向上后下</p>
+
+<body>
+
+</body>
+
+</html>

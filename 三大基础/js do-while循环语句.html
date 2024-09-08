@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    do-while循环语句 是先执行循环体内容后执行判断语句
+    do{
+
+    }while()
+
+
+    <script>
+        do {
+            console.log('我是小猪佩奇')
+        } while (false)
+        // Math.random()随机获得0到1之间的小数
+        // 随机获得1到10之间的整数
+        parseInt(Math.random() * 10)
+        // 若想得到[a, b]之间的整数 公式为
+        parseInt(Math.random() * (b - a + 1)) + a
+
+
+
+        // do-while小案例 有用
+        // 随机生成两个量dx dy 在[-4,4]之间 且不能同时为零
+        do {
+            var a = parseInt(Math.random() * 9) - 4;
+            var b = parseInt(Math.random() * 9) - 4;
+        } while (a == 0 && b == 0)
+        console.log(a, b)
+
+    </script>
+
+</body>
+
+</html>

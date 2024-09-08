@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: 12px/1.5 Microsoft YaHei;
+            /* 1.5表示该选择器下的行距为单独元素自设的行距的1.5倍，Microsoft YaHei为微软雅黑 */
+        }
+
+        a {
+            color: brown;
+        }
+
+        a {
+            color: cyan;
+        }
+
+        ul {
+            color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">层叠性 同一级下样式冲突，采取就近原则</a>
+    <ul>
+        <li>继承性</li>
+        <li>子代继承父代属性</li>
+        <li>但继承的优先级为零</li>
+    </ul>
+    <div>
+        <h3>优先级表示</h3>
+        <h4>1 !important</h4>
+        <h4>2 行内样式</h4>
+        <h4>3 ID选择器</h4>
+        <h4>4 类选择器、伪类选择器</h4>
+        <h4>5 元素选择器</h4>
+        <h4>继承或通配符即*</h4>
+    </div>
+</body>
+
+</html>

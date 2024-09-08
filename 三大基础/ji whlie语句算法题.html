@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a = Number(prompt('请输入1到100之间的数'));
+        var b = parseInt(Math.random() * 100) + 1;
+        // 为了用户更好的体验 加上最大值与最小值
+        var min = 1;
+        var max = 100;
+        while (true) {
+            var a = Number(prompt('请输入' + min + '~' + max + '之间的数字'));
+            // 验证用户输入的是否在区间内
+            if (a <= min || a >= max) {
+                alert('您输入的数字不在范围内')
+                // 不在区间内直接放弃这次循环
+                continue;
+            }
+            if (a == b) {
+                alert('您猜对了');
+                break
+            } else if (a < b) {
+                alert('您猜小了');
+                min = a;
+                // var a = Number(prompt('请输入' + min + '~' + max + '之间的数字'));
+            } else {
+                alert('您猜大了');
+                max = a;
+                // var a = Number(prompt('请输入' + min + '~' + max + '之间的数字'));
+            }
+        }
+        // do-while循环也可以做
+
+    </script>
+
+
+</body>
+
+</html>

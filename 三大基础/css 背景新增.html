@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 400px;
+            height: 100px;
+            background-image: url(图片储存/u=613707095,3567870221&fm=193.jpg);
+            border: 10px dotted black;
+            padding: 10px;
+            /* background-size: 300px 100px; */
+            /* 可以设置尺寸 百分比 auto为自动等比例填充 */
+            /* background-size: 100% 100%; */
+            /* background-size: contain; */
+            /* contain 智能改变尺寸以容纳盒子 */
+            background-size: cover;
+            /* cover 智能改变盒子以撑满盒子 */
+            margin-bottom: 10px;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 100px;
+            background-image: url(图片储存/u=613707095,3567870221&fm=193.jpg);
+            border: 10px dotted black;
+            padding: 10px;
+            background-size: cover;
+            margin-bottom: 10px;
+            background-clip: padding-box;
+            /* padding-box 使背景裁切到线内 */
+        }
+
+        .box3 {
+            width: 400px;
+            height: 100px;
+            background-image: url(图片储存/u=613707095,3567870221&fm=193.jpg);
+            border: 10px dotted black;
+            padding: 10px;
+            background-size: cover;
+            margin-bottom: 10px;
+            background-clip: content-box;
+            /* content-box 使背景裁剪到内容区域 */
+            /* background-origin: content-box; */
+            /* 背景起源 用处不大 */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">背景尺寸</div>
+    <div class="box2">背景裁切</div>
+    <div class="box3">背景裁切</div>
+
+</body>
+
+</html>

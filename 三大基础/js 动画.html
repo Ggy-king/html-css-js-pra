@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">开始</button>
+    <div id="box"></div>
+    <script>
+        var obtn = document.getElementById('btn');
+        var obox = document.getElementById('box');
+        var pos = 1; //添加标识量
+
+        // 设锁
+        var lock = true;
+
+        obtn.onclick = function () {
+            obox.style.transition = 'all 1s linear 0s';
+            if (!lock) return;
+            if (pos == 1) {
+                obox.style.left = '1100px';
+                pos = 2;
+            } else if (pos == 2) {
+                obox.style.left = '50px';
+                pos = 1;
+            }
+            // 关锁
+            lock = false;
+            // 延迟锁
+            setTimeout(function () {
+                lock = true;
+            }, 1800);
+
+        }
+        // 函数节流
+        var lock = true;
+        function 需要节流的函数() {
+            // 如果锁是关闭的则不执行
+            if (!lock) return;
+            //函数核心语句
+
+            //关锁
+            lock = flase;
+
+            //制定毫秒数后打开锁
+            setTimeout(function () {
+                lock = true;
+            }, 2000);
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

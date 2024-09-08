@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            margin: 60px auto;
+            border: 4px solid red;
+        }
+
+        .pare {
+            width: 80px;
+            height: 80px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <p>date 自定义标识 getAttribute 可以得到该属性</p>
+    <p>e.target 点击事件</p>
+    <p date-n='自己定义标识'>offsetTop属性 表示此元素到定位祖先元素的垂直距离</p>
+    <p>定位祖先元素 在祖先中离自己最近的且拥有定位属性的元素</p>
+    <div class="box" id="box">
+        <div class="pare" id="pare"></div>
+    </div>
+    <script>
+        var oPare = document.getElementById('pare');
+        console.log(oPare.offsetTop);
+    </script>
+
+</body>
+
+</html>

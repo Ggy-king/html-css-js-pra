@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            background-color: pink;
+            animation: r 2s linear 0s infinite alternate;
+        }
+
+        @-webkit-keyframes r {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        @-webkit-keyframes a {
+            0% {
+                transform: rotate(0);
+            }
+
+            20% {
+                transform: rotate(360deg);
+            }
+
+            40% {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>动画两步 先是定义 后是调用</p>
+    <p>-webkit-keyframes 前是私有名词 后为帧 内由from to构成</p>
+    <p>animation 为调用的意思</p>
+    <p>animation: 名字 过度时间 变化趋势 延迟时间 执行次数 ;forwards 停止在最后一次的状态 infinite 永远执行 alternate 偶数次自动逆行</p>
+    <p>还可以用百分数定义多关键帧</p>
+    <div class="box"> </div>
+
+</body>
+
+</html>

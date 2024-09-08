@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    if(测试条件) {
+    条件为真执行这里
+    }else {
+    否则怎么样
+    }
+
+    if else if语句 else if 表示否则如果
+    <script>
+        var a = Number(prompt('请输入一个数字'));
+        if (a % 2 == 0) {
+            alert(a + '是偶数');
+        } else {
+            alert(a + '这是奇数');
+        }
+        var b = Number(prompt('请输入您的年龄'));
+        if (b <= 18 || b >= 70) {
+            alert('您不可以考取驾照');
+        } else {
+            alert('您可以考取驾照');
+        }
+
+        // 如果if语句只有一行 可以省略大括号和换行
+        if (a == 5) alert('你真有意思');
+        var bb = Number(prompt('请输入成绩'));
+        if (bb >= 85) {
+            alert('成绩优秀');
+        } else if (bb >= 60) {
+            alert('成绩及格');
+        } else {
+            alert('成绩不合格');
+        }
+    </script>
+
+</body>
+
+</html>

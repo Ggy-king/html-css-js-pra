@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- for循环语句 括号内两个定义域一个判断条件 中间用分号隔开  i必须定义-->
+    <script>
+        for (var i = 1; i <= 10; i++) {
+            console.log(i)
+        }
+        for (var i = 1; i <= 12; i += 5) {
+            console.log(i)
+        }
+        for (var i = 15; i >= 4; i -= 3) {
+            console.log(i)
+        }
+        for (var i = 1; i <= 14; i += 2) {
+            i += 4
+            console.log(i)
+        }
+        for (var i = 4; i <= 9; i++) {
+
+        }
+        console.log(i);
+        for (var i = 0; i <= 1; i += 0.2) {
+            console.log(Number(i.toFixed(1)))
+        }
+        for (var i = 1; i > 5; i--) {
+            console.log(i)
+            // 无效语句
+        }
+
+
+        // 计算1+...到100的值
+        // var sum = 0
+        for (var i = 1, sum = 0; i <= 100; i++) {
+            sum += i
+        }
+        console.log(sum)
+
+        // 求1到100中那个数字满足除3余1 除4余2 除5余3
+        // 穷举法
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 1 && i % 4 == 2 && i % 5 == 3) {
+                console.log(i)
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

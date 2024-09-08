@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ll {
+            width: 200px;
+            height: 100px;
+            border-color: darkgreen;
+            /* 盒子样式中有solid 实线 double 双线 dotted 点线 dashed 虚线 */
+            /* border-style: solid; */
+            border-style: solid;
+            border-width: 5px;
+            /* border: blue 6px double;可以实现多项并写且没有顺序 */
+            /* padding-left: 可以改变左侧边距 */
+            padding-left: 10px;
+            /* padding: 2px 6px;为上下内侧边距为2px,左右内侧边距为6px */
+            /* padding: 8px;为所有内侧边距都为8px */
+            /* padding: 8px 5px 6px;为上8下6左右5 */
+            /* padding: 5px 6px 7px 8px;为从上边距开始顺时针旋转赋值 */
+
+        }
+
+        .nav1,
+        .nav2 {
+            background-color: pink;
+            width: 200px;
+            height: 100px;
+        }
+
+        .nav1 {
+            /* margin 是盒子的外边距，与padding的用法一样 */
+            margin-top: 20px;
+        }
+
+        .nav2 {
+            margin: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ll">我是一个盒子，padding可以改变内侧边距 边框大小会影响盒子大小计算时要把边框大小算上去</div>
+    <div class="nav1">1</div>
+    <div class="nav2">2</div>
+
+    <p>min-width: 限制最小宽度 加height就高</p>
+</body>
+
+</html>

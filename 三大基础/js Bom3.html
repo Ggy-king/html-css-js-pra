@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>windows.location对象可以标识当前所在网址，可以通过给这个属性赋值命令浏览器进行页面跳转</p>
+    <p>windows.location.herf也行</p>
+    <p>location中reload属性以重新加载页面，参数true表示强制服务器加载</p>
+    <p>location中search属性即为当前浏览器GET请求查询参数</p>
+    <button id="btn">点我去看慕课</button>
+    <button id="btn2">刷新</button>
+    <script>
+        console.log(window.location);
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = function () {
+            window.location = "http://www.imooc.com";
+        }
+        var oBtn2 = document.getElementById('btn2');
+        oBtn2.onclick = function () {
+            window.location.reload(true);
+        }
+    </script>
+
+</body>
+
+</html>
